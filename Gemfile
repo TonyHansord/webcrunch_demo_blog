@@ -45,7 +45,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -77,7 +77,7 @@ group :development do
   gem "guard", "~> 2.14", ">= 2.14.1"
 
   #guard-livereload - reloads the browser when files change
-  gem "guard-livereload", "~> 2.5", ">= 2.5.2"
+  gem "guard-livereload", "~> 2.5", ">= 2.5.2", require: false
 
 end
 
