@@ -1,8 +1,24 @@
+<% content_for :page_title, @post.title%>
 <section class='section'>
-    <div class='container'>
-        <h1 class='title'>
-            <%= @post.title %>
-        </h1>
-        <p><%= @post.content %></p>
+  <div class='container'>
+    <nav class='level'>
+      <div class='level-left'>
+        <p class='level-item'>
+          <strong>Actions</strong>
+        </p>
+      </div>
+      <div class='level-right'>
+        <p class='level-item'>
+          <%= link_to 'Edit', edit_post_path(@post), class: 'button is primary' %>
+        </p>
+        <p class='level-item'>
+          <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-danger' %>
+        </p>
+      </nav>
+      <hr/>
+      <div>
+        <%= @post.content %>
+      </div>
     </div>
-</section>
+  </section>
+  <section class="comments"></section>
